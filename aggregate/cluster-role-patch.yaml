@@ -1,0 +1,10 @@
+apiVersion: rbac.authorization.k8s.io/v1  
+kind: ClusterRole  
+metadata:  
+  name: admin  
+  labels:  
+    rbac.authorization.k8s.io/aggregate-to-test1-admin: "true"  
+aggregationRule:  
+  clusterRoleSelectors:  
+  - matchLabels:  
+      rbac.authorization.k8s.io/aggregate-to-test1-admin: "true"
